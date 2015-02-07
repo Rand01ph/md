@@ -167,7 +167,7 @@ DATABASES = {
         # Add "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".
         "ENGINE": "django.db.backends.mysql",
         # DB name or path to database file if using sqlite3.
-        "NAME": "tantest01",
+        "NAME": "",
         # Not used with sqlite3.
         "USER": "root",
         # Not used with sqlite3.
@@ -225,12 +225,12 @@ ROOT_URLCONF = "%s.urls" % PROJECT_DIRNAME
 # Don't forget to use absolute paths, not relative paths.
 TEMPLATE_DIRS = (os.path.join(PROJECT_ROOT, "templates"),)
 
-
 ################
 # APPLICATIONS #
 ################
 
 INSTALLED_APPS = (
+    "mezzanine_file_collections",
     "flat",
     "django.contrib.admin",
     "django.contrib.auth",
@@ -248,7 +248,7 @@ INSTALLED_APPS = (
     "mezzanine.forms",
     "mezzanine.pages",
     "mezzanine.galleries",
-    "mezzanine.twitter",
+    #"mezzanine.twitter",
     #"mezzanine.accounts",
     #"mezzanine.mobile",
 )

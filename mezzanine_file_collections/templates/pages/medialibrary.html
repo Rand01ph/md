@@ -10,24 +10,28 @@
 <section id="portfolio" class="container">
 {{ block.super }}
 
-{% editable page.gallery.content %}
-{{ page.gallery.content|richtext_filters|safe }}
+{% editable page.medialibrary.content %}
+{{ page.medialibrary.content|richtext_filter|safe }}
 {% endeditable %}
 
-{% with page.gallery.images.all as images %}
+{% block medialibrary %}
+{% with page.medialibrary.files.all as files %}
 <ul class="portfolio-items col-3">
-			{% for image in images %}
+{% for file in files %}
+{% block mediafile %}
             <li class="portfolio-item apps">
                 <div class="item-inner">
-                    <img src="{{ image.file.url }}" alt="">
-                    <h5>{{ image.description }}</h5>
+                    <img src="{{ MEDIA_URL }}{{ file.file }}" alt="">
+                    <h5>{{ file.description }}</h5>
                     <div class="overlay">
-                        <a class="preview btn btn-danger" href="{{ image.file.url }}" rel="prettyPhoto"><i class="icon-eye-open"></i></a>             
+                        <a class="preview btn btn-danger" href="{{ file.url }}" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
                     </div>           
                 </div>           
             </li><!--/.portfolio-item-->
-			{% endfor %}
+{% endblock %}
 </ul>
+{% endfor %}
 {% endwith %}
+{% endblock %}
 </section>
 {% endblock %}
