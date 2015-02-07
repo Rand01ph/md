@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-python manage.py runserver 202.114.177.31:8000
-=======
-python manage.py runserver  0.0.0.0:8080
->>>>>>> devl
