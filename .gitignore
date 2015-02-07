@@ -5,7 +5,4 @@
 .coverage
 local_settings.py
 /static
-<<<<<<< HEAD
-=======
 mezzanine
->>>>>>> devl
