@@ -219,3 +219,6 @@
 [Sun Mar 08 16:27:06.058167 2015] [wsgi:error] [pid 18202:tid 140046139332352] 
 [Sun Mar 08 05:08:25.178955 2015] [wsgi:error] [pid 24327:tid 139798842885888] /home/tan/.virtualenvs/md/lib/python2.7/site-packages/mezzanine/utils/conf.py:52: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
 [Sun Mar 08 05:08:25.179034 2015] [wsgi:error] [pid 24327:tid 139798842885888]   warn("You haven't defined the ALLOWED_HOSTS settings, which "
+[Sun Mar 08 17:28:26.356817 2015] [wsgi:error] [pid 24327:tid 139798750566144] /home/tan/.virtualenvs/md/lib/python2.7/site-packages/mezzanine/core/templatetags/mezzanine_tags.py:438: UserWarning: The `richtext_filter` template tag is deprecated in favor of the new plural tag `richtext_filters`.
+[Sun Mar 08 17:28:26.356878 2015] [wsgi:error] [pid 24327:tid 139798750566144]   warn("The `richtext_filter` template tag is deprecated in favor of "
+[Sun Mar 08 17:28:26.356901 2015] [wsgi:error] [pid 24327:tid 139798750566144] 
