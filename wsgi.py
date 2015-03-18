@@ -4,6 +4,9 @@ import os
 import sys
 import site
 
+activate_this = '/home/tan/.virtualenvs/md/bin/activate_this.py'
+execfile(activate_this, dict(__file__=activate_this))
+
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIRNAME = PROJECT_ROOT.split(os.sep)[-1]
 
