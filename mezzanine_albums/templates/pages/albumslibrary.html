@@ -11,25 +11,32 @@
 {% endblock %}
 
 {% block main %}
-{{ block.super }}
+<section id="portfolio" class="container">
+    {{ block.super }}
 
-{% editable page.albumslibrary.content %}
-{{ page.albumslibrary.content|richtext_filter|safe }}
-{% endeditable %}
-
-<div>
-    {% for items in detail %}
-    <div class="baguetteBox{{ forloop.counter }} gallery">
-        {% for item in items %}
-        <a href="{{ MEDIA_URL }}{{ item.file }}"><img src="{{ MEDIA_URL }}{% thumbnail item.file 100 100 %}" /></a>
+    {% editable page.albumslibrary.content %}
+    {{ page.albumslibrary.content|richtext_filter|safe }}
+    {% endeditable %}
+    <ul class="portfolio-items col-3">
+        {% for items in detail %}
+        <li class="portfolio-item apps">
+        <div class="baguetteBox{{ forloop.counter }} gallery item-inner">
+            {% for item in items %}
+            <a href="{{ MEDIA_URL }}{{ item.file }}" title="{{ item.title }}"><img src="{{ MEDIA_URL }}{{ item.file }}" /></a>
+            {% if forloop.first %}
+            <h5>{{ item.description }}</h5>
+            {% endif %}
+            {% endfor %}
+        </div>
+        </li>
         {% endfor %}
-    </div>
-    {% endfor %}
-</div>
+    </ul>
+</section>
+
 
 <script>
 window.onload = function(){
-    $(".gallery").each(function(i, item){baguetteBox.run('.' + $(item).attr('class').split(' ')[0]);});
+    $(".gallery").each(function(i, item){baguetteBox.run('.' + $(item).attr('class').split(' ')[0], {animation: 'fadeIn',});});
 }
 </script>
 {% endblock %}
