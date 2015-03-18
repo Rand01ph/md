@@ -235,6 +235,7 @@ TEMPLATE_DIRS = (os.path.join(PROJECT_ROOT, "templates"),)
 INSTALLED_APPS = (
     "mezzanine_file_collections",
     "flat",
+    "mezzanine_about",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",

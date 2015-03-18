@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load mezzanine_tags keyword_tags i18n %}
+
+{% block meta_title %}{% if person %}{{ person.full_name }}{% else %}{% trans "Person" %}{% endif %}{% endblock %}
+
+{% block meta_keywords %}{% metablock %}
+{% keywords_for person as keywords %}
+{% for keyword in keywords %}{% if not forloop.first %}, {% endif %}{{ keyword }}{% endfor %}
+{% endmetablock %}{% endblock %}
+
+{% block meta_description %}{% metablock %}
+{{ person.description }}
+{% endmetablock %}{% endblock %}
+
+{% block title %}
+{% if page %}
+{% editable page.title %}{{ page.title }}{% endeditable %}
+{% else %}
+{% editable person.title %}{{ person.title }}{% endeditable %}
+{% endif %}
+{% endblock %}
+
+{% block breadcrumb_menu %}
+{{ block.super }}
+{% endblock %}
+
+{% block main %}
+
+
+
+<div>
+  <p>关于我们</p>
+  <ul>
+      <li><p>{{ about.tel }}</p></li>
+      <li><p>{{ about.qq }}</p></li>
+      <li><p>{{ about.email }}</p></li>
+      <li><p>{{ about.tel }}</p></li>
+      <li><p>{{ about.address }}</p></li>
+      <li><a href="{{ about.address }}">地址</a></li>    
+  </ul>
+</div>
+<iframe width="504" height="425" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="{{ about.address }}"></iframe>
+
+
+{% endblock %}

@@ -32,7 +32,8 @@ urlpatterns += patterns('',
     # one out.
 
     url("^$", direct_to_template, {"template": "index.html"}, name="home"),
-    url("^about.html$", direct_to_template, {"template": "about.html"}),
+    url(r"^contact/", include('mezzanine_about.urls')),
+
 
     # HOMEPAGE AS AN EDITABLE PAGE IN THE PAGE TREE
     # ---------------------------------------------
