@@ -33,6 +33,7 @@ urlpatterns += patterns('',
 
     url("^$", direct_to_template, {"template": "index.html"}, name="home"),
     url(r"^contact/", include('mezzanine_about.urls')),
+    url(r"^albums/$", "mezzanine.pages.views.page", {"slug": "albums"}, name="albums"),
 
 
     # HOMEPAGE AS AN EDITABLE PAGE IN THE PAGE TREE
