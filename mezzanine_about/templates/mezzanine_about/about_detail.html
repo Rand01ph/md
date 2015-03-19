@@ -26,20 +26,21 @@
 
 {% block main %}
 
+<section class="container row">
+
+    <div class="col-md-4 col-md-offset-2" style="line-height: 200%; font-size: 14px;">
+        <h4>联系我们:</h4>
+        <ul style="list-style-type: none;">
+            <li><p><i class="icon-mobile-phone"></i>  电话: {{ about.tel }}</p></li>
+            <li><p><i class="icon-comments"></i>  QQ: {{ about.qq }}</p></li>
+            <li><p><i class="icon-envelope-alt"></i>  E-mail: {{ about.email }}</p></li>
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <iframe width="504" height="425" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="{{ about.address }}"></iframe>
+    </div>
 
 
-<div>
-  <p>关于我们</p>
-  <ul>
-      <li><p>{{ about.tel }}</p></li>
-      <li><p>{{ about.qq }}</p></li>
-      <li><p>{{ about.email }}</p></li>
-      <li><p>{{ about.tel }}</p></li>
-      <li><p>{{ about.address }}</p></li>
-      <li><a href="{{ about.address }}">地址</a></li>    
-  </ul>
-</div>
-<iframe width="504" height="425" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="{{ about.address }}"></iframe>
-
+</section>
 
 {% endblock %}
