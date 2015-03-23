@@ -82,7 +82,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                {% if settings.SITE_TITLE %}<a class="navbar-brand" href="/">{{ settings.SITE_TITLE }}</a>{% endif %}
+                {% if settings.SITE_TITLE %}<a class="navbar-brand" href="/"><img src="{% static "images/slider/logo.png" %}"></a>{% endif %}
 				{% if settings.SITE_TAGLINE %}<p class="navbar-text visible-lg">{{ settings.SITE_TAGLINE }}</p>{% endif %}
             </div>
             <div class="collapse navbar-collapse">
@@ -145,7 +145,7 @@
    
     
     
-<section id="bottom" class="wet-asphalt">
+<section id="bottom" class="wet-asphalt" style="background: #252525;">
 	<div class="container">
 	{% page_menu "pages/menus/footer.html" %}
 </div>
