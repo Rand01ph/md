@@ -254,7 +254,7 @@ body > section {
   background-color: #f39c12;
 }
 .emerald {
-  background-color: #000000;
+  background-color: #252525;
 }
 .nephritis {
   background-color: #27ae60;
@@ -272,7 +272,7 @@ body > section {
   background-color: #2980b9;
 }
 .alizarin {
-  background-color: #000000;
+  background-color: #d9534f;
 }
 .pomegranate {
   background-color: #c0392b;
@@ -290,7 +290,7 @@ body > section {
   background-color: #bdc3c7;
 }
 .wet-asphalt {
-  background-color: #000000;
+  background-color: #252525;
 }
 .wet-asphalt a:not(.btn) {
   color: #bdc3c7;
@@ -299,7 +299,7 @@ body > section {
   color: #d9534f;
 }
 .midnight-blue {
-  background-color: #000000;
+  background-color: #252525;
 }
 .concrete {
   background-color: #95a5a6;
@@ -742,7 +742,7 @@ ul.tag-cloud li {
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .open > a:hover,
 .navbar-inverse .navbar-nav > .open > a:focus {
-  background-color: #2c3e50;
+  background-color: #252525;
 }
 .navbar-inverse .navbar-nav .dropdown-menu {
   background-color: #2c3e50;
