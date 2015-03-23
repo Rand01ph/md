@@ -3,7 +3,7 @@
 {% block blog_recent_posts %}
 {% blog_recent_posts 5 as recent_posts %}
 {% if recent_posts %}
-<h3>{% trans "Recent Posts" %}</h3>
+<h5>{% trans "Recent Posts" %}</h5>
 <ul class="arrow">
 {% for recent_post in recent_posts %}
 <li><a href="{{ recent_post.get_absolute_url }}"
@@ -16,7 +16,7 @@
 {% block blog_months %}
 {% blog_months as months %}
 {% if months %}
-<h3>{% trans "Archive" %}</h3>
+<h5>{% trans "Archive" %}</h5>
 {% for month in months %}
     {% ifchanged month.date.year %}
         {% if not forloop.first %}</ul>{% endif %}
@@ -33,7 +33,7 @@
 {% if categories %}
 
 <div class="widget categories">
-                    <h3>{% trans "Categories" %}</h3>
+                    <h5>{% trans "Categories" %}</h5>
                     <div class="row">
                         <div class="col-sm-12">
                             <ul class="arrow">
@@ -56,7 +56,7 @@
 {% if tags %}
 
 <div class="widget tags">
-                    <h3>{% trans "Tags" %}</h3>
+                    <h5>{% trans "Tags" %}</h5>
                     <ul class="tag-cloud">
 {% for tag in tags %}
 <li>
@@ -73,7 +73,7 @@
 {% block blog_authors %}
 {% blog_authors as authors %}
 {% if authors %}
-<h3>{% trans "Authors" %}</h3>
+<h5>{% trans "Authors" %}</h5>
 <ul class="arrow">
 {% for author in authors %}
     <li><a href="{% url "blog_post_list_author" author.username %}"
@@ -85,7 +85,7 @@
 {% endblock %}
 
 {% block blog_feeds %}
-<h3>{% trans "Feeds" %}</h3>
+<h5>{% trans "Feeds" %}</h5>
 {% if tag %}
     <a href="{% url "blog_post_feed_tag" tag.slug "rss" %}">{% trans "RSS" %}</a> /
     <a href="{% url "blog_post_feed_tag" tag.slug "atom" %}">{% trans "Atom" %}</a>

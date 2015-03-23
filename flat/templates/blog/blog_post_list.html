@@ -73,9 +73,6 @@
     {% if page %}
     {% block blog_post_list_pagecontent %}
     {% if page.get_content_model.content %}
-        {% editable page.get_content_model.content %}
-        {{ page.get_content_model.content|richtext_filters|safe }}
-        {% endeditable %}
     {% endif %}
     {% endblock %}
     {% endif %}
