@@ -14,15 +14,12 @@
 <section id="portfolio" class="container">
     {{ block.super }}
 
-    {% editable page.albumslibrary.content %}
-    {{ page.albumslibrary.content|richtext_filter|safe }}
-    {% endeditable %}
     <ul class="portfolio-items col-3">
         {% for items in detail %}
         <li class="portfolio-item apps">
-        <div class="baguetteBox{{ forloop.counter }} gallery item-inner">
+        <div class="gallery item-inner">
             {% for item in items %}
-            <a href="{{ MEDIA_URL }}{{ item.file }}" title="{{ item.title }}"><img src="{{ MEDIA_URL }}{{ item.file }}" /></a>
+            <a href="{{ MEDIA_URL }}{{ item.file }}" title="{{ item.title }}" rel="prettyPhoto[{{ item.bianhao }}]"><img src="{{ MEDIA_URL }}{{ item.file }}" alt="{{ item.tittle }}"/></a>
             {% if forloop.first %}
             <h5>{{ item.description }}</h5>
             {% endif %}
@@ -31,12 +28,13 @@
         </li>
         {% endfor %}
     </ul>
+        
 </section>
+			<script type="text/javascript" charset="utf-8">
+			$(document).ready(function(){
+				$("area[rel^='prettyPhoto']").prettyPhoto();
+			});
+			</script>
 
 
-<script>
-window.onload = function(){
-    $(".gallery").each(function(i, item){baguetteBox.run('.' + $(item).attr('class').split(' ')[0], {animation: 'fadeIn',});});
-}
-</script>
 {% endblock %}
