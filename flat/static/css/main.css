@@ -350,7 +350,7 @@ body > section {
 #main-slider .carousel .item {
   background-position: 50%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   left: 0 !important;
   opacity: 0;
   top: 0;
