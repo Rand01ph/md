@@ -8,7 +8,7 @@
     {% for page in page_branch %}
     {% if not has_home and page.is_primary and forloop.first %}
     <li{% if on_home %} class="active"{% endif %} id="dropdown-menu-home">
-    <a href="{% url "home" %}"><span>Home</span><em style="font-style: normal;">{% trans "Home" %}</em></a>
+    <a href="{% url "home" %}"><span>HOME</span><em style="font-style: normal;">{% trans "Home" %}</em></a>
     </li>
     {% endif %}
     {% if page.in_menu %}
