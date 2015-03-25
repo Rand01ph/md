@@ -236,6 +236,7 @@ INSTALLED_APPS = (
     "mezzanine_file_collections",
     "flat",
     "mezzanine_about",
+    "mezzanine_blocks",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",

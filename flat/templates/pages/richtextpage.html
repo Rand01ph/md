@@ -1,11 +1,16 @@
 {% extends "pages/page.html" %}
 
 {% load mezzanine_tags %}
+{% load block_tags %}
 
 {% block main %}{{ block.super }}
-<section  class="container">
+<section  class="container row">
+    <div class="col-md-8 col-md-offset-2">
 {% editable page.richtextpage.content %}
 {{ page.richtextpage.content|richtext_filters|safe }}
 {% endeditable %}
+    </div>
+    <div class="col-md-2 server_right">
+        {% richflatblock "My Awesome HTML Block" %}
 </section>
 {% endblock %}
