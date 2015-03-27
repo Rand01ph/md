@@ -432,7 +432,7 @@ body > section {
 }
 #services .media:hover .icon-md {
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(217, 83, 79, 0.8);
 }
 #recent-works {
   padding: 90px 0;
@@ -823,7 +823,7 @@ footer {
   line-height: 68px;
   color: #fff;
   margin-right: 10px;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(37, 37, 37, 0.4);
   text-align: center;
   display: block;
   border-radius: 50%;
