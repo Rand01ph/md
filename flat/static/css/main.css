@@ -42,7 +42,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Georgia, "Times New Roman", 
+  font-family: Calibri, Georgia, "Times New Roman", 
              "Microsoft YaHei", "微软雅黑", 
              STXihei, "华文细黑", 
              serif;
@@ -719,7 +719,7 @@ ul.tag-cloud li {
   border: none;
 }
 .navbar-inverse .navbar-brand {
-  font-family: Georgia, "Times New Roman", 
+  font-family: Calibri, Georgia, "Times New Roman", 
              "Microsoft YaHei", "微软雅黑", 
              STXihei, "华文细黑", 
              serif;
