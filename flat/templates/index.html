@@ -6,6 +6,11 @@
 
 {% endblock %}
 
+{% block extra_js %}
+<script src="{% static "js/public.js" %}"></script>
+<script src="{% static "js/ss.js" %}"></script>
+{% endblock %}
+
 {% block main %}
 <section class="no-margin" id="main-slider">
     <div class="carousel slide wet-asphalt">
@@ -28,7 +33,7 @@
                 </div>
             </div><!--/.item-->
             <div style="background-image: url(static/images/slider/bg2.jpg)" class="item">
-               <div class="container">
+                <div class="container">
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="carousel-content center centered" style="margin-top: 208.5px;">
@@ -193,7 +198,7 @@
                                             <a class="preview" title="当你走过成片" href='<embed src="http://player.youku.com/player.php/sid/XOTE4MzAyNDM2/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>' rel="prettyPhoto">
                                                 <img class="img-responsive" src="http://r4.ykimg.com/05410408550FD9F56A0A4B045EC5EB37" alt="" /></a>
                                             <h5>
-                                               当你走过成片 
+                                                当你走过成片 
                                             </h5>
                                         </div>
                                     </div>
@@ -230,7 +235,7 @@
                                             <a class="preview" title="当你走过成片" href='<embed src="http://player.youku.com/player.php/sid/XOTE4MzAyNDM2/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>' rel="prettyPhoto">
                                                 <img class="img-responsive" src="http://r4.ykimg.com/05410408550FD9F56A0A4B045EC5EB37" alt="" /></a>
                                             <h5>
-                                               当你走过成片 
+                                                当你走过成片 
                                             </h5>
                                         </div>
                                     </div>
@@ -265,7 +270,7 @@
                                             <a class="preview" title="当你走过成片" href='<embed src="http://player.youku.com/player.php/sid/XOTE4MzAyNDM2/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>' rel="prettyPhoto">
                                                 <img class="img-responsive" src="http://r4.ykimg.com/05410408550FD9F56A0A4B045EC5EB37" alt="" /></a>
                                             <h5>
-                                               当你走过成片 
+                                                当你走过成片 
                                             </h5>
                                         </div>
                                     </div>
@@ -283,34 +288,35 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="center">
-                    <h2>What our clients say</h2>
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                    <h2>OUR PARTNERS</h2>
                 </div>
                 <div class="gap"></div>
                 <div class="row">
-                    <div class="col-md-6">
-                        <blockquote>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                            <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
-                        </blockquote>
-                        <blockquote>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                            <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
-                        </blockquote>
-                    </div>
-                    <div class="col-md-6">
-                        <blockquote>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                            <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
-                        </blockquote>
-                        <blockquote>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                            <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
-                        </blockquote>
+
+                    <div style="width:1000px; margin:0 auto">
+                        <div class="mr_frbox">
+                            <div class="mr_frUl">
+                                <ul>
+                                    <li><img src="{% static "images/CCTV.jpg" %}" width="123" height="52" /><img src="{% static "images/CCTV.jpg" %}" width="123" height="52" /></li>
+                                    <li><img src="{% static "images/CCTV.jpg" %}" width="123" height="52" /><img src="{% static "images/CCTV.jpg" %}" width="123" height="52" /></li>
+                                    <li><img src="{% static "images/CCTV.jpg" %}" width="123" height="52" /><img src="{% static "images/CCTV.jpg" %}" width="123" height="52" /></li>
+                                    <li><img src="{% static "images/CCTV.jpg" %}" width="123" height="52" /><img src="{% static "images/CCTV.jpg" %}" width="123" height="52" /></li>
+                                    <li><img src="{% static "images/CCTV.jpg" %}" width="123" height="52" /><img src="{% static "images/CCTV.jpg" %}" width="123" height="52" /></li>
+                                    <li><img src="{% static "images/CCTV.jpg" %}" width="123" height="52" /><img src="{% static "images/CCTV.jpg" %}" width="123" height="52" /></li>
+                                    <li><img src="{% static "images/CCTV.jpg" %}" width="123" height="52" /><img src="{% static "images/CCTV.jpg" %}" width="123" height="52" /></li>
+                                    <li><img src="{% static "images/CCTV.jpg" %}" width="123" height="52" /><img src="{% static "images/CCTV.jpg" %}" width="123" height="52" /></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <script language="javascript">
+$(".mr_frUl ul li img").hover(function(){$(this).css("border-color","#A0C0EB");},function(){$(this).css("border-color","#d8d8d8")});
+jQuery(".mr_frbox").slide({titCell:"",mainCell:".mr_frUl ul",autoPage:true,effect:"leftMarquee",interTime:30,autoPlay:true,vis:7});
+                        </script>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </section><!--/#testimonial-->
 
