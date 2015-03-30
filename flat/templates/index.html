@@ -311,6 +311,10 @@
                         <script language="javascript">
 $(".mr_frUl ul li img").hover(function(){$(this).css("border-color","#A0C0EB");},function(){$(this).css("border-color","#d8d8d8")});
 jQuery(".mr_frbox").slide({titCell:"",mainCell:".mr_frUl ul",autoPage:true,effect:"leftMarquee",interTime:30,autoPlay:true,vis:7});
+
+$(document).ready(function(){
+$("#main-slider .carousel .item").each(function(){a=$(this).width()/1920*750;$(this).height(a)});
+});
                         </script>
                     </div>
                 </div>
